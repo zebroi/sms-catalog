@@ -92,14 +92,27 @@ td a{font-weight:600}
 .faq-body{display:none;font-size:.88rem;color:var(--muted);line-height:1.65;padding:0 4px 18px}
 .faq-item.open .faq-body{display:block}
 .faq-item.open .faq-icon{transform:rotate(45deg);border-color:var(--pri);color:var(--pri)}
-footer{background:var(--surf);border-top:1px solid var(--border);padding:40px 0 28px;margin-top:40px;text-align:center;color:var(--muted);font-size:.83rem}
-footer a{color:var(--muted)}
+footer{background:var(--surf);border-top:1px solid var(--border);padding:48px 0 24px;margin-top:40px}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;margin-bottom:40px}
+.footer-logo{font-family:"Manrope",sans-serif;font-weight:800;font-size:1.1rem;color:var(--text);margin-bottom:12px}
+.footer-logo em{color:var(--pri);font-style:normal}
+.footer-about{font-size:.83rem;color:var(--muted);line-height:1.6;margin-bottom:16px;max-width:280px}
+.footer-links-row{display:flex;flex-direction:column;gap:6px}
+.footer-links-row a{font-size:.8rem;color:var(--muted)}
+.footer-links-row a:hover{color:var(--pri)}
+.footer-heading{font-family:"Manrope",sans-serif;font-weight:700;font-size:.82rem;text-transform:uppercase;letter-spacing:.06em;color:var(--text);margin-bottom:14px}
+.footer-nav{list-style:none;display:flex;flex-direction:column;gap:7px}
+.footer-nav a{font-size:.83rem;color:var(--muted)}
+.footer-nav a:hover{color:var(--pri)}
+.footer-bottom{border-top:1px solid var(--border);padding-top:20px;display:flex;justify-content:space-between;align-items:center;font-size:.78rem;color:var(--muted);flex-wrap:wrap;gap:8px}
+@media(max-width:768px){.footer-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:640px){
   .sec-head{flex-direction:column;align-items:flex-start}
   .card-specs{grid-template-columns:1fr}
   .card-foot{flex-direction:column;align-items:flex-start}
   .rv-head{flex-direction:column;align-items:flex-start}
 }
+@media(max-width:480px){.footer-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -221,6 +234,7 @@ footer a{color:var(--muted)}
         </div>
         <div class="card-foot">
           <div><div class="price-big">от нескольких рублей</div><div class="price-note">Удобен для большого объёма</div></div>
+          <a class="btn btn-out" href="https://5sim.net" target="_blank">Подробнее →</a>
         </div>
       </article>
 
@@ -237,6 +251,7 @@ footer a{color:var(--muted)}
         </div>
         <div class="card-foot">
           <div><div class="price-big">от 1 ₽ / номер</div><div class="price-note">Только разовые активации</div></div>
+          <a class="btn btn-out" href="https://tiger-sms.com" target="_blank">Подробнее →</a>
         </div>
       </article>
 
@@ -253,6 +268,7 @@ footer a{color:var(--muted)}
         </div>
         <div class="card-foot">
           <div><div class="price-big">гибкая ценовая сетка</div><div class="price-note">Для массовых сценариев</div></div>
+          <a class="btn btn-out" href="https://simsms.org" target="_blank">Подробнее →</a>
         </div>
       </article>
 
@@ -269,6 +285,7 @@ footer a{color:var(--muted)}
         </div>
         <div class="card-foot">
           <div><div class="price-big">Бесплатно</div><div class="price-note">SMS видят все пользователи</div></div>
+          <a class="btn btn-out" href="https://receivefreesms.com" target="_blank">Подробнее →</a>
         </div>
       </article>
 
@@ -285,6 +302,24 @@ footer a{color:var(--muted)}
         </div>
         <div class="card-foot">
           <div><div class="price-big">Бесплатно</div><div class="price-note">Нужно приложение TextNow</div></div>
+          <a class="btn btn-out" href="https://www.textnow.com" target="_blank">Подробнее →</a>
+        </div>
+      </article>
+
+      <article class="card extra" data-tags="api cheap" style="display:none">
+        <div class="card-head">
+          <div class="card-icon">📲</div>
+          <div><div class="card-title">SMSHUB</div><div class="card-rating">★★★★☆ 4.4 · хорошие цены</div></div>
+        </div>
+        <p class="card-desc">Сервис SMS-активаций с низкими ценами. Популярен среди арбитражников, есть API и массовые номера.</p>
+        <div class="tags"><span class="tag">17+ стран</span><span class="tag">API</span><span class="tag">Массовые</span></div>
+        <div class="card-specs">
+          <div><span class="spec-label">Цена за СМС</span><span class="spec-val">низкие цены</span></div>
+          <div><span class="spec-label">Формат</span><span class="spec-val">SMS + аренда</span></div>
+        </div>
+        <div class="card-foot">
+          <div><div class="price-big">доступные цены</div><div class="price-note">Оплата МИР</div></div>
+          <a class="btn btn-out" href="https://smshub.org" target="_blank">Подробнее →</a>
         </div>
       </article>
 
@@ -313,18 +348,18 @@ footer a{color:var(--muted)}
           <tr><td>1</td><td><a href="https://grizzlysms.com/ru/telegram?r=899703" target="_blank"><strong>GrizzlySMS</strong></a></td><td>от 1 ₽</td><td>РФ, СНГ, Европа</td><td>SMS + аренда</td><td>✓</td><td>✓</td></tr>
           <tr><td>2</td><td><a href="https://sms-man.com/ru?ref=p55UCSjmpLac" target="_blank"><strong>SMS-Man</strong></a></td><td>от 2 ₽</td><td>200+ стран</td><td>SMS + аренда</td><td>✓</td><td>✓</td></tr>
           <tr><td>3</td><td><a href="https://onlinesim.io/ru?aref=6587180" target="_blank"><strong>OnlineSim</strong></a></td><td>от 3 ₽</td><td>Россия, Европа, Азия</td><td>SMS + долгая аренда</td><td>✓</td><td>✓</td></tr>
-          <tr><td>4</td><td><strong>VAK-SMS</strong></td><td>от ~2 ₽</td><td>~30 стран</td><td>SMS + аренда</td><td>Частично</td><td>✓</td></tr>
-          <tr><td>5</td><td><strong>365SMS</strong></td><td>от ~11 ₽</td><td>140+ стран</td><td>SMS-активации</td><td>✓</td><td>✓</td></tr>
-          <tr><td>6</td><td><strong>SMS-REG</strong></td><td>от 3 ₽</td><td>~13 стран</td><td>SMS + аренда</td><td>✓</td><td>✓</td></tr>
-          <tr><td>7</td><td><strong>SimSMS</strong></td><td>от 2 ₽</td><td>Популярные GEO</td><td>SMS и аренда</td><td>✓</td><td>✓</td></tr>
-          <tr><td>8</td><td><strong>5SIM</strong></td><td>от $0.01</td><td>180+ стран</td><td>SMS-активации</td><td>✓</td><td>✓</td></tr>
-          <tr><td>9</td><td><strong>Tiger SMS</strong></td><td>от 1 ₽</td><td>200+ стран</td><td>SMS-активации</td><td>✓</td><td>✓</td></tr>
-          <tr><td>10</td><td><strong>SMSHUB</strong></td><td>низкие цены</td><td>17+ стран</td><td>SMS + аренда</td><td>✓</td><td>✓</td></tr>
-          <tr><td>11</td><td><strong>GotSMS</strong></td><td>от ~$1</td><td>Реальные SIM</td><td>Non-VoIP OTP</td><td>✓</td><td>—</td></tr>
-          <tr><td>12</td><td><strong>CheapSMS</strong></td><td>от 1 ₽</td><td>40+ стран</td><td>SMS-активации</td><td>✓</td><td>✓</td></tr>
-          <tr><td>13</td><td><strong>SMSBower</strong></td><td>от ~0.4 ₽</td><td>100+ стран</td><td>SMS-коды</td><td>✓</td><td>—</td></tr>
-          <tr><td>14</td><td><strong>CyberYozh</strong></td><td>от $0.02</td><td>~140 стран</td><td>Временная аренда</td><td>✓</td><td>—</td></tr>
-          <tr><td>15</td><td><strong>SMSC.ru</strong></td><td>от ~2500 ₽/мес</td><td>Россия (+7)</td><td>Виртуальные номера</td><td>✓</td><td>✓</td></tr>
+          <tr><td>4</td><td><a href="https://vak-sms.com" target="_blank"><strong>VAK-SMS</strong></a></td><td>от ~2 ₽</td><td>~30 стран</td><td>SMS + аренда</td><td>Частично</td><td>✓</td></tr>
+          <tr><td>5</td><td><a href="https://365sms.ru" target="_blank"><strong>365SMS</strong></a></td><td>от ~11 ₽</td><td>140+ стран</td><td>SMS-активации</td><td>✓</td><td>✓</td></tr>
+          <tr><td>6</td><td><a href="https://sms-reg.com" target="_blank"><strong>SMS-REG</strong></a></td><td>от 3 ₽</td><td>~13 стран</td><td>SMS + аренда</td><td>✓</td><td>✓</td></tr>
+          <tr><td>7</td><td><a href="https://simsms.org" target="_blank"><strong>SimSMS</strong></a></td><td>от 2 ₽</td><td>Популярные GEO</td><td>SMS и аренда</td><td>✓</td><td>✓</td></tr>
+          <tr><td>8</td><td><a href="https://5sim.net" target="_blank"><strong>5SIM</strong></a></td><td>от $0.01</td><td>180+ стран</td><td>SMS-активации</td><td>✓</td><td>✓</td></tr>
+          <tr><td>9</td><td><a href="https://tiger-sms.com" target="_blank"><strong>Tiger SMS</strong></a></td><td>от 1 ₽</td><td>200+ стран</td><td>SMS-активации</td><td>✓</td><td>✓</td></tr>
+          <tr><td>10</td><td><a href="https://smshub.org" target="_blank"><strong>SMSHUB</strong></a></td><td>низкие цены</td><td>17+ стран</td><td>SMS + аренда</td><td>✓</td><td>✓</td></tr>
+          <tr><td>11</td><td><a href="https://gotsms.net" target="_blank"><strong>GotSMS</strong></a></td><td>от ~$1</td><td>Реальные SIM</td><td>Non-VoIP OTP</td><td>✓</td><td>—</td></tr>
+          <tr><td>12</td><td><a href="https://cheapsms.ru" target="_blank"><strong>CheapSMS</strong></a></td><td>от 1 ₽</td><td>40+ стран</td><td>SMS-активации</td><td>✓</td><td>✓</td></tr>
+          <tr><td>13</td><td><a href="https://smsbower.com" target="_blank"><strong>SMSBower</strong></a></td><td>от ~0.4 ₽</td><td>100+ стран</td><td>SMS-коды</td><td>✓</td><td>—</td></tr>
+          <tr><td>14</td><td><a href="https://cyberyozh.com" target="_blank"><strong>CyberYozh</strong></a></td><td>от $0.02</td><td>~140 стран</td><td>Временная аренда</td><td>✓</td><td>—</td></tr>
+          <tr><td>15</td><td><a href="https://smsc.ru" target="_blank"><strong>SMSC.ru</strong></a></td><td>от ~2500 ₽/мес</td><td>Россия (+7)</td><td>Виртуальные номера</td><td>✓</td><td>✓</td></tr>
         </tbody>
       </table>
     </div>
@@ -346,14 +381,14 @@ footer a{color:var(--muted)}
           <tr><th>Сервис</th><th>Тип доступа</th><th>Ограничения</th><th>Telegram</th><th>Страны</th></tr>
         </thead>
         <tbody>
-          <tr><td><strong>ReceiveFreeSMS</strong></td><td>Публичные номера</td><td>SMS видны всем</td><td>✓ Иногда</td><td>США, Европа, Азия</td></tr>
-          <tr><td><strong>FreePhoneNum</strong></td><td>Публичные номера</td><td>SMS видны всем</td><td>✓ Иногда</td><td>США, Канада</td></tr>
-          <tr><td><strong>sms-receive.net</strong></td><td>Публичные номера</td><td>SMS видны всем</td><td>✓ Иногда</td><td>ЕС, США</td></tr>
-          <tr><td><strong>Receive-SMSS.com</strong></td><td>Публичные номера</td><td>Открытый доступ</td><td>✓ Иногда</td><td>США, Европа</td></tr>
-          <tr><td><strong>TextNow</strong></td><td>Личный номер</td><td>Только США/Канада</td><td>✓ Работает</td><td>США, Канада</td></tr>
-          <tr><td><strong>Pinger / TextFree</strong></td><td>Личный номер</td><td>Только США/Канада</td><td>✓ Работает</td><td>США, Канада</td></tr>
-          <tr><td><strong>FreeOnlinePhone</strong></td><td>Публичные номера</td><td>SMS видны всем</td><td>Ограничено</td><td>США, Великобритания</td></tr>
-          <tr><td><strong>SMS24.me</strong></td><td>Публичные номера</td><td>SMS видны всем</td><td>Ограничено</td><td>Несколько стран</td></tr>
+          <tr><td><a href="https://receivefreesms.com" target="_blank"><strong>ReceiveFreeSMS</strong></a></td><td>Публичные номера</td><td>SMS видны всем</td><td>✓ Иногда</td><td>США, Европа, Азия</td></tr>
+          <tr><td><a href="https://freephonenum.com" target="_blank"><strong>FreePhoneNum</strong></a></td><td>Публичные номера</td><td>SMS видны всем</td><td>✓ Иногда</td><td>США, Канада</td></tr>
+          <tr><td><a href="https://sms-receive.net" target="_blank"><strong>sms-receive.net</strong></a></td><td>Публичные номера</td><td>SMS видны всем</td><td>✓ Иногда</td><td>ЕС, США</td></tr>
+          <tr><td><a href="https://receive-smss.com" target="_blank"><strong>Receive-SMSS.com</strong></a></td><td>Публичные номера</td><td>Открытый доступ</td><td>✓ Иногда</td><td>США, Европа</td></tr>
+          <tr><td><a href="https://www.textnow.com" target="_blank"><strong>TextNow</strong></a></td><td>Личный номер</td><td>Только США/Канада</td><td>✓ Работает</td><td>США, Канада</td></tr>
+          <tr><td><a href="https://www.pinger.com" target="_blank"><strong>Pinger / TextFree</strong></a></td><td>Личный номер</td><td>Только США/Канада</td><td>✓ Работает</td><td>США, Канада</td></tr>
+          <tr><td><a href="https://freeonlinephone.org" target="_blank"><strong>FreeOnlinePhone</strong></a></td><td>Публичные номера</td><td>SMS видны всем</td><td>Ограничено</td><td>США, Великобритания</td></tr>
+          <tr><td><a href="https://sms24.me" target="_blank"><strong>SMS24.me</strong></a></td><td>Публичные номера</td><td>SMS видны всем</td><td>Ограничено</td><td>Несколько стран</td></tr>
         </tbody>
       </table>
     </div>
@@ -454,7 +489,7 @@ footer a{color:var(--muted)}
       </div>
       <div class="faq-item">
         <button class="faq-btn" type="button"><span>Могут ли забанить Telegram-аккаунт на виртуальном номере?</span><span class="faq-icon">+</span></button>
-        <div class="faq-body">Telegram смотрит прежде всего на поведение аккаунта. Массовые регистрации и спам повышают риск бана вне зависимости от типа номера — физического или виртуального.</div>
+        <div class="faq-body">Telegram смотрит прежде всего на поведение аккаунта. Массовые регистрации и спам повышают риск бана вне зависимости от типа номера.</div>
       </div>
       <div class="faq-item">
         <button class="faq-btn" type="button"><span>Что надёжнее: платные сервисы или бесплатные номера?</span><span class="faq-icon">+</span></button>
@@ -492,7 +527,56 @@ footer a{color:var(--muted)}
 
 <footer>
   <div class="container">
-    <p>© 2026 SMS-каталог &nbsp;·&nbsp; <a href="index.html">На главную</a></p>
+    <div class="footer-grid">
+
+      <div class="footer-col">
+        <div class="footer-logo"><em>SMS</em>каталог</div>
+        <p class="footer-about">Независимый каталог сервисов виртуальных номеров. Сравниваем цены, скорость и надёжность, чтобы вы не тратили время на поиск.</p>
+        <div class="footer-links-row">
+          <a href="o-nas.html">О нас</a>
+          <a href="kak-eto-rabotaet.html">Как это работает</a>
+          <a href="politika-konfidencialnosti.html">Политика конфиденциальности</a>
+          <a href="kontakty.html">Контакты</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-heading">Популярные запросы</div>
+        <ul class="footer-nav">
+          <li><a href="nomera-dlya-telegram.html">Купить номер для Telegram</a></li>
+          <li><a href="nomera-dlya-whatsapp.html">Купить номер для WhatsApp</a></li>
+          <li><a href="nomera-dlya-discord.html">Купить номер для Discord</a></li>
+          <li><a href="nomera-dlya-paypal.html">Купить номер для PayPal</a></li>
+          <li><a href="nomera-dlya-tiktok.html">Виртуальный номер для TikTok</a></li>
+          <li><a href="nomera-dlya-twitch.html">Купить номер для Twitch</a></li>
+          <li><a href="nomera-dlya-google.html">Виртуальный номер для Google</a></li>
+          <li><a href="fanpay-nomer.html">FanPay номер</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-heading">Номера по странам</div>
+        <ul class="footer-nav">
+          <li><a href="kupit-amerikanskiy-nomer.html">Купить американский номер</a></li>
+          <li><a href="kupit-kazakhskiy-nomer.html">Купить казахский номер</a></li>
+          <li><a href="kupit-belorusskiy-nomer.html">Купить белорусский номер</a></li>
+          <li><a href="kupit-ukrainskiy-nomer.html">Купить украинский номер</a></li>
+          <li><a href="kupit-nomer-turtsii.html">Купить номер Турции</a></li>
+          <li><a href="kupit-yaponskiy-nomer.html">Купить японский номер</a></li>
+          <li><a href="kupit-nomer-kitay.html">Купить номер Китая</a></li>
+          <li><a href="kupit-germanskiy-nomer.html">Купить германский номер</a></li>
+          <li><a href="kupit-nomer-velikobritanii.html">Купить номер Великобритании</a></li>
+          <li><a href="kupit-nomer-niderlandov.html">Купить номер Нидерландов</a></li>
+          <li><a href="virtualnyy-nomer-tadzhikistan.html">Виртуальный номер Таджикистан</a></li>
+          <li><a href="kupit-nomer-drugoy-strany.html">Купить номер другой страны</a></li>
+        </ul>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 SMS-каталог</span>
+      <span>Данные обновлены: апрель 2026</span>
+    </div>
   </div>
 </footer>
 
